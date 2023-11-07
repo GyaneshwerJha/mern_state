@@ -4,11 +4,12 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 // connect to the database
-mongoose.connect(process.env.MONGO).then(() => {
-    console.log("Database Connected");
-}).catch((err) => {
-    console.log(err);
-});
+mongoose.connect(process.env.MONGO)
+    .then(() => {
+        console.log("Database Connected");
+    }).catch((err) => {
+        console.log(err);
+    });
 
 const app = express();
 
